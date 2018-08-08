@@ -3,6 +3,7 @@
 
 using System;
 using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.WebJobs.Description;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Azure.WebJobs.Host.Config;
 using Microsoft.Azure.WebJobs.Logging;
@@ -17,6 +18,7 @@ namespace Microsoft.Azure.WebJobs.ServiceBus.Config
     /// <summary>
     /// Extension configuration provider used to register ServiceBus triggers and binders
     /// </summary>
+    [Extension("ServiceBus")]
     public class ServiceBusExtensionConfig : IExtensionConfigProvider
     {
         private readonly INameResolver _nameResolver;
